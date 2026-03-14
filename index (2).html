@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Atharv Ved Foods – Homemade with Love & Hygiene</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Nunito',sans-serif;background:#FFFBF4;color:#2C1A00;overflow-x:hidden;}
+:root{--orange:#F97316;--orange-light:#FED7AA;--orange-dark:#C2410C;--yellow:#FDE68A;--green:#16A34A;--green-light:#DCFCE7;--brown:#7C3A00;--text:#2C1A00;--muted:#92400E;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:#FFFBF4;border-bottom:2px dashed var(--orange-light);position:sticky;top:0;z-index:100;}
+.logo{font-family:'Baloo 2',cursive;font-size:1.5rem;font-weight:800;color:var(--orange-dark);}
+.logo span{color:var(--green);}
+.nav-links{display:flex;gap:1.5rem;list-style:none;}
+.nav-links a{text-decoration:none;color:var(--brown);font-weight:600;font-size:0.95rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--orange);}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2rem;padding:4rem 3rem 3rem;background:linear-gradient(135deg,#FFFBF4 60%,#FED7AA 100%);position:relative;overflow:hidden;}
+.hero::before{content:"🍱";font-size:14rem;position:absolute;right:-1rem;top:-2rem;opacity:0.07;pointer-events:none;}
+.hero-badge{display:inline-block;background:var(--yellow);color:var(--brown);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:0.3rem 0.9rem;border-radius:99px;margin-bottom:1rem;border:2px solid var(--orange-light);}
+.hero h1{font-family:'Baloo 2',cursive;font-size:3.4rem;font-weight:800;line-height:1.1;color:var(--orange-dark);margin-bottom:1rem;}
+.hero h1 span{color:var(--green);}
+.hero p{font-size:1.15rem;color:var(--muted);line-height:1.7;margin-bottom:2rem;max-width:440px;}
+.btn-primary{display:inline-block;background:var(--orange);color:white;font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;padding:0.8rem 2rem;border-radius:99px;border:none;cursor:pointer;text-decoration:none;box-shadow:4px 4px 0 var(--orange-dark);transition:transform 0.15s,box-shadow 0.15s;}
+.btn-primary:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--orange-dark);}
+.btn-secondary{display:inline-block;background:transparent;color:var(--orange-dark);font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;padding:0.8rem 2rem;border-radius:99px;border:2px solid var(--orange);cursor:pointer;text-decoration:none;margin-left:1rem;transition:background 0.2s,color 0.2s;}
+.btn-secondary:hover{background:var(--orange-light);}
+.hero-visual{display:flex;justify-content:center;align-items:center;position:relative;}
+.food-circle{width:340px;height:340px;border-radius:50%;background:var(--orange-light);border:6px solid var(--orange);display:flex;align-items:center;justify-content:center;font-size:8rem;position:relative;animation:float 3s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.food-tag{position:absolute;background:white;border:2px solid var(--orange-light);border-radius:12px;padding:0.4rem 0.8rem;font-size:0.8rem;font-weight:700;color:var(--brown);box-shadow:2px 2px 0 var(--orange-light);}
+.food-tag:nth-child(2){top:20px;right:0px;}
+.food-tag:nth-child(3){bottom:40px;left:-10px;}
+.food-tag:nth-child(4){top:140px;right:-30px;}
+.trust-strip{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;padding:1.5rem 2rem;background:var(--green);color:white;}
+.trust-item{display:flex;align-items:center;gap:0.5rem;font-weight:700;font-size:0.95rem;}
+section{padding:4rem 2rem;}
+.section-label{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--orange);margin-bottom:0.5rem;}
+.section-title{font-family:'Baloo 2',cursive;font-size:2.2rem;font-weight:800;color:var(--text);margin-bottom:0.5rem;line-height:1.2;}
+.section-sub{color:var(--muted);font-size:1rem;margin-bottom:2.5rem;max-width:500px;}
+.products{background:#FFFBF4;}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;max-width:900px;margin:0 auto;}
+.product-card{background:white;border-radius:20px;border:2px solid var(--orange-light);padding:1.5rem 1rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s;}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(249,115,22,0.15);}
+.product-emoji{font-size:3rem;margin-bottom:0.75rem;display:block;}
+.product-name{font-family:'Baloo 2',cursive;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:0.3rem;}
+.product-desc{font-size:0.85rem;color:var(--muted);line-height:1.5;}
+.product-tag{display:inline-block;margin-top:0.75rem;background:var(--green-light);color:var(--green);font-size:0.75rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:99px;}
+.about{background:#FFF7ED;}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:900px;margin:0 auto;}
+.about-emoji-box{background:var(--orange-light);border-radius:24px;border:3px solid var(--orange);display:flex;align-items:center;justify-content:center;font-size:6rem;height:280px;position:relative;}
+.about-emoji-box::after{content:"Est. 2020";position:absolute;bottom:-14px;right:20px;background:var(--green);color:white;font-size:0.8rem;font-weight:700;padding:0.3rem 0.8rem;border-radius:99px;}
+.values-list{list-style:none;margin-top:1.5rem;}
+.values-list li{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1rem;font-size:0.95rem;color:var(--text);line-height:1.5;}
+.val-icon{width:30px;height:30px;border-radius:50%;background:var(--orange-light);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.order-section{background:#FFF7ED;}
+.order-form-wrapper{max-width:700px;margin:0 auto;background:white;border-radius:24px;border:2px solid var(--orange-light);padding:2rem;box-shadow:0 8px 30px rgba(249,115,22,0.08);}
+.form-group{margin-bottom:1.25rem;}
+.form-group label{display:block;font-weight:700;font-size:0.9rem;color:var(--brown);margin-bottom:0.4rem;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:0.7rem 1rem;border:2px solid var(--orange-light);border-radius:12px;font-family:'Nunito',sans-serif;font-size:0.95rem;color:var(--text);background:#FFFBF4;outline:none;transition:border 0.2s;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--orange);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.product-select-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-top:0.5rem;}
+.product-select-item{border:2px solid var(--orange-light);border-radius:14px;padding:0.75rem;background:#FFFBF4;transition:border 0.2s,background 0.2s;}
+.product-select-item.selected{border-color:var(--orange);background:var(--orange-light);}
+.product-select-item label{display:flex;align-items:center;gap:0.5rem;cursor:pointer;font-weight:600;font-size:0.9rem;color:var(--text);}
+.product-select-item input[type=checkbox]{accent-color:var(--orange);width:16px;height:16px;}
+.qty-row{display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem;}
+.qty-row label{font-size:0.8rem;color:var(--muted);}
+.qty-row input{width:60px;padding:0.3rem 0.5rem;border:1.5px solid var(--orange-light);border-radius:8px;font-family:'Nunito',sans-serif;font-size:0.9rem;text-align:center;}
+.whatsapp-btn{display:flex;align-items:center;justify-content:center;gap:0.6rem;width:100%;background:#25D366;color:white;font-family:'Nunito',sans-serif;font-size:1.05rem;font-weight:700;padding:0.9rem 2rem;border-radius:99px;border:none;cursor:pointer;margin-top:1.5rem;box-shadow:4px 4px 0 #128C7E;transition:transform 0.15s,box-shadow 0.15s;}
+.whatsapp-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #128C7E;}
+.whatsapp-icon{width:22px;height:22px;fill:white;}
+.order-summary{background:var(--orange-light);border-radius:14px;padding:1rem 1.25rem;margin-top:1.25rem;display:none;}
+.order-summary h4{font-family:'Baloo 2',cursive;font-size:1rem;font-weight:700;color:var(--orange-dark);margin-bottom:0.5rem;}
+.order-summary p{font-size:0.88rem;color:var(--brown);line-height:1.7;}
+.contact{background:var(--orange-dark);color:white;}
+.contact .section-label{color:var(--yellow);}
+.contact .section-title{color:white;}
+.contact .section-sub{color:#FED7AA;}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;max-width:700px;}
+.contact-card{background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.2);border-radius:16px;padding:1.5rem;}
+.contact-card h4{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;opacity:0.7;}
+.contact-card p{font-size:1rem;font-weight:600;}
+.contact-card a{color:var(--yellow);text-decoration:none;}
+footer{text-align:center;padding:1.5rem;font-size:0.85rem;background:#1C0A00;color:#92400E;}
+footer span{color:var(--orange);font-weight:700;}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding:2rem 1.5rem;}.hero h1{font-size:2.4rem;}.food-circle{width:220px;height:220px;font-size:5rem;}.about-inner{grid-template-columns:1fr;}nav{flex-wrap:wrap;gap:0.5rem;}.form-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Atharv <span>Ved</span> Foods</div>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#order">Order</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div>
+    <div class="hero-badge">🏠 Homemade · Hygienic · Heartfelt</div>
+    <h1>Real Food.<br/>Made with <span>Love</span> &amp;<br/>Hygiene.</h1>
+    <p>Bringing the warmth of homemade cooking to your plate — freshly prepared, hygienically packed, and full of flavour you can trust.</p>
+    <a href="#order" class="btn-primary">Order Now</a>
+    <a href="#products" class="btn-secondary">See Products</a>
+  </div>
+  <div class="hero-visual">
+    <div class="food-circle">🍛
+      <div class="food-tag">✅ Hygienic</div>
+      <div class="food-tag">🏠 Homemade</div>
+      <div class="food-tag">❤️ Fresh Daily</div>
+    </div>
+  </div>
+</section>
+<div class="trust-strip">
+  <div class="trust-item">✅ No Preservatives</div>
+  <div class="trust-item">🧼 Hygienically Prepared</div>
+  <div class="trust-item">🏠 Made at Home</div>
+  <div class="trust-item">🚚 Fresh Delivery</div>
+</div>
+<section class="products" id="products">
+  <div class="section-label">What We Make</div>
+  <div class="section-title">Our Homemade Specialities</div>
+  <div class="section-sub">Every item is crafted fresh with love, using quality ingredients and clean preparation standards.</div>
+  <div class="products-grid">
+    <div class="product-card"><span class="product-emoji">🥘</span><div class="product-name">Curries &amp; Gravies</div><div class="product-desc">Rich, aromatic homestyle curries made fresh daily with hand-ground spices.</div><span class="product-tag">Fresh Daily</span></div>
+    <div class="product-card"><span class="product-emoji">🍱</span><div class="product-name">Tiffin Boxes</div><div class="product-desc">Balanced, wholesome meal boxes perfect for office, school, or home.</div><span class="product-tag">Made to Order</span></div>
+    <div class="product-card"><span class="product-emoji">🫙</span><div class="product-name">Pickles &amp; Chutneys</div><div class="product-desc">Traditional recipes passed down through generations — no artificial flavours.</div><span class="product-tag">No Additives</span></div>
+    <div class="product-card"><span class="product-emoji">🍪</span><div class="product-name">Snacks &amp; Farsan</div><div class="product-desc">Crispy, tasty, hygienic homemade snacks — great for gifting too!</div><span class="product-tag">Hygienic Packing</span></div>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-emoji-box">🧑‍🍳</div>
+    <div>
+      <div class="section-label">Our Story</div>
+      <div class="section-title">Food You Can Trust</div>
+      <p style="color:var(--muted);line-height:1.7;font-size:1rem;">At Atharv Ved Foods, we believe every meal should feel like home. Our kitchen follows strict hygiene practices so you and your family eat safe, healthy, and delicious food — every single time.</p>
+      <ul class="values-list">
+        <li><div class="val-icon">🧼</div><div><strong>Hygiene First</strong> — Sanitised prep area, gloves, and clean packaging every time.</div></li>
+        <li><div class="val-icon">🌿</div><div><strong>Natural Ingredients</strong> — No preservatives, no artificial colours or flavours.</div></li>
+        <li><div class="val-icon">❤️</div><div><strong>Made with Care</strong> — Every recipe is crafted with passion and personal touch.</div></li>
+        <li><div class="val-icon">📦</div><div><strong>Freshly Packed</strong> — Prepared and packed only after your order is placed.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="order-section" id="order">
+  <div class="section-label">Place an Order</div>
+  <div class="section-title">Order Fresh Food 🛒</div>
+  <div class="section-sub">Fill in your details and we'll confirm your order via WhatsApp.</div>
+  <div class="order-form-wrapper">
+    <div class="form-row">
+      <div class="form-group"><label>Your Name *</label><input type="text" id="cust-name" placeholder="e.g. Priya Sharma"/></div>
+      <div class="form-group"><label>Phone Number *</label><input type="tel" id="cust-phone" placeholder="e.g. 9876543210"/></div>
+    </div>
+    <div class="form-group"><label>Delivery Address *</label><textarea id="cust-address" rows="2" placeholder="House no., Street, Area, City..."></textarea></div>
+    <div class="form-group">
+      <label>Select Products *</label>
+      <div class="product-select-grid">
+        <div class="product-select-item" id="item-curries"><label><input type="checkbox" value="Curries & Gravies" onchange="toggleItem(this)"/> 🥘 Curries &amp; Gravies</label><div class="qty-row" style="display:none"><label>Qty:</label><input type="number" min="1" value="1" id="qty-curries"/></div></div>
+        <div class="product-select-item" id="item-tiffin"><label><input type="checkbox" value="Tiffin Boxes" onchange="toggleItem(this)"/> 🍱 Tiffin Boxes</label><div class="qty-row" style="display:none"><label>Qty:</label><input type="number" min="1" value="1" id="qty-tiffin"/></div></div>
+        <div class="product-select-item" id="item-pickles"><label><input type="checkbox" value="Pickles & Chutneys" onchange="toggleItem(this)"/> 🫙 Pickles &amp; Chutneys</label><div class="qty-row" style="display:none"><label>Qty:</label><input type="number" min="1" value="1" id="qty-pickles"/></div></div>
+        <div class="product-select-item" id="item-snacks"><label><input type="checkbox" value="Snacks & Farsan" onchange="toggleItem(this)"/> 🍪 Snacks &amp; Farsan</label><div class="qty-row" style="display:none"><label>Qty:</label><input type="number" min="1" value="1" id="qty-snacks"/></div></div>
+      </div>
+    </div>
+    <div class="form-group"><label>Preferred Delivery Time *</label><select id="cust-time"><option value="">-- Select a time slot --</option><option>Morning (8 AM – 11 AM)</option><option>Afternoon (12 PM – 3 PM)</option><option>Evening (4 PM – 7 PM)</option></select></div>
+    <div class="form-group"><label>Special Instructions (optional)</label><textarea id="cust-notes" rows="2" placeholder="Any dietary preferences, allergies, or special requests..."></textarea></div>
+    <div class="order-summary" id="order-summary"><h4>📋 Order Preview</h4><p id="summary-text"></p></div>
+    <button class="whatsapp-btn" onclick="sendWhatsApp()">
+      <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Send Order via WhatsApp
+    </button>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="section-label">Get in Touch</div>
+  <div class="section-title">Contact Us</div>
+  <div class="section-sub">Reach out to place an order, ask about custom catering, or just say hello!</div>
+  <div class="contact-grid">
+    <div class="contact-card"><h4>📞 Phone / WhatsApp</h4><p><a href="https://wa.me/918333830807">+91 83338 30807</a></p></div>
+    <div class="contact-card"><h4>📧 Email</h4><p><a href="mailto:hello@atharvvedfoods.com">hello@atharvvedfoods.com</a></p></div>
+    <div class="contact-card"><h4>📍 Based in</h4><p>Bengaluru, Karnataka</p></div>
+  </div>
+</section>
+<footer>&copy; 2026 <span>Atharv Ved Foods</span> · Homemade with ❤️ &amp; Hygiene</footer>
+<script>
+const itemMap={'Curries & Gravies':{card:'item-curries',qty:'qty-curries'},'Tiffin Boxes':{card:'item-tiffin',qty:'qty-tiffin'},'Pickles & Chutneys':{card:'item-pickles',qty:'qty-pickles'},'Snacks & Farsan':{card:'item-snacks',qty:'qty-snacks'}};
+function toggleItem(cb){const card=cb.closest('.product-select-item');const qtyRow=card.querySelector('.qty-row');if(cb.checked){card.classList.add('selected');qtyRow.style.display='flex';}else{card.classList.remove('selected');qtyRow.style.display='none';}updateSummary();}
+function updateSummary(){const items=getSelectedItems();const summary=document.getElementById('order-summary');const summaryText=document.getElementById('summary-text');if(items.length>0){summary.style.display='block';summaryText.innerHTML=items.map(i=>`• ${i.name} x${i.qty}`).join('<br/>');}else{summary.style.display='none';}}
+function getSelectedItems(){const items=[];Object.entries(itemMap).forEach(([name,ids])=>{const card=document.getElementById(ids.card);const cb=card.querySelector('input[type=checkbox]');if(cb.checked){const qty=document.getElementById(ids.qty).value||1;items.push({name,qty});}});return items;}
+function sendWhatsApp(){const name=document.getElementById('cust-name').value.trim();const phone=document.getElementById('cust-phone').value.trim();const address=document.getElementById('cust-address').value.trim();const time=document.getElementById('cust-time').value;const notes=document.getElementById('cust-notes').value.trim();const items=getSelectedItems();if(!name){alert('Please enter your name.');return;}if(!phone){alert('Please enter your phone number.');return;}if(!address){alert('Please enter your delivery address.');return;}if(items.length===0){alert('Please select at least one product.');return;}if(!time){alert('Please select a preferred delivery time.');return;}const itemLines=items.map(i=>`  • ${i.name} x${i.qty}`).join('\n');const msg=`🍛 *New Order – Atharv Ved Foods*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n📍 *Address:* ${address}\n🛒 *Items:*\n${itemLines}\n🕐 *Delivery Time:* ${time}\n`+(notes?`📝 *Notes:* ${notes}\n`:'')+`\n_Order placed via Atharv Ved Foods website_`;window.open(`https://wa.me/918333830807?text=${encodeURIComponent(msg)}`,'_blank');}
+document.querySelectorAll('.qty-row input[type=number]').forEach(inp=>{inp.addEventListener('change',updateSummary);});
+</script>
+</body>
+</html>
